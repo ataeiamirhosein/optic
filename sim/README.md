@@ -1,7 +1,7 @@
 DRL  
 
-![agent](https://github.com/ataeiamirhosein/optic/sim/blob/main/agent.jpg)  
+![agent](https://github.com/ataeiamirhosein/optic/blob/main/sim/agent.png)  
 
 SIM  
 
-![sim](https://github.com/ataeiamirhosein/optic/sim/blob/main/sim.bmp)  
+![sim](https://github.com/ataeiamirhosein/optic/blob/main/sim/sim.bmp)  
