@@ -6,8 +6,7 @@ clc;
 close all;
 clear;
 
-%% [important] >constants
-
+%% constants
 sec = 0.02; % pls do not change it (( simulation time step ))
 
 %motors situation ((first set pulse to 90 deg))
@@ -16,6 +15,7 @@ motor_four = 90;
 
 motor_two = 90;
 motor_three = 90;
+
 %% end constant and start
 deg_x = randi(45);
 deg_y = randi(45);
@@ -61,7 +61,7 @@ motor_three = 180 - deg_x;
 motor_four = deg_y;
 end
 
-%if one of them set to 90
+%one of them set to 90
 
 if (deg_x == 90) && (deg_y < motor_four)
 motor_one = 90;
@@ -129,7 +129,7 @@ t = max(time);
 
 ttt = t / sec;
 
-%calculate time
+%time complexity
 disp('@ greater elapsed time need: ')
 disp(t)
 
@@ -141,7 +141,12 @@ tt(1,i) = 5;
 end
 end
 
-%time complexity plot
+%amp shaping (( tau ))
+tt(1,ttt-3) = 3.5;
+tt(1,ttt-2) = 2.5;
+tt(1,ttt-1) = 1.5;
+
+%time plot
 figure
 suptitle('amplitude per time')
 
@@ -162,8 +167,5 @@ ylabel('amp')
 
 %wait for see and run again
 pause(10);
-
-%% [important] >true for run again and false for wait
-go = false;
-
+go = true;
 end
